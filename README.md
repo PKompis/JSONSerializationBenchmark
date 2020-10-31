@@ -3,7 +3,7 @@
 The .NET Serialization Benchmark is a console application with a purpose (as the name describes) to test the performance of the various serializers that exists out there.
 
 ##### Console Application should be run in RELEASE mode.
-##### If you do not have installed R comment out the line: [RPlotExporter]
+##### If you do not have installed R comment out [this line](https://github.com/PKompis/.NETSerializationBenchmark/blob/main/SerializationBenchmark/Program.cs#L12)
 
 
 ## Libaries used
