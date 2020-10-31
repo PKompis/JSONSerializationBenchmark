@@ -18,10 +18,9 @@ The results may vary for different datasets/test objects, thus the application p
 - [Jil](https://github.com/kevin-montrose/Jil)
 - [Utf8Json](https://github.com/neuecc/Utf8Json)
 
-## Dataset
+## Object under serialization
 
-A list of a custom object that can be found [here](https://github.com/PKompis/JSONSerializationBenchmark/blob/main/SerializationBenchmark/Types/MainTestObject.cs).
-10.000 elements are added to the above described list.
+Custom object can be found [here](https://github.com/PKompis/JSONSerializationBenchmark/blob/main/SerializationBenchmark/Types/MainTestObject.cs).
 
 ## Results
 
@@ -33,15 +32,32 @@ Intel Core i5-4670K CPU 3.40GHz (Haswell), 1 CPU, 4 logical and 4 physical cores
   [Host]     : .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
   DefaultJob : .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
 
-```
-|         Method |       Mean |    Error |   StdDev |
-|--------------- |-----------:|---------:|---------:|
-|     Newtonsoft | 1,459.6 ms |  6.82 ms |  5.69 ms |
-|   ServiceStack | 1,666.6 ms |  5.40 ms |  5.05 ms |
-| SystemTextJson | 1,551.8 ms | 12.00 ms | 11.23 ms |
-|       Utf8Json |   843.4 ms |  9.77 ms |  9.14 ms |
-|            Jil |   683.7 ms |  8.83 ms |  8.26 ms |
+```    
 
+**NElements** refers to the number of objects that are inserted in the list that is serialized.    
+
+|         Method | NElements |           Mean |        Error |       StdDev |
+|--------------- |---------- |---------------:|-------------:|-------------:|
+|     **Newtonsoft** |        **10** |     **1,450.7 μs** |     **15.71 μs** |     **14.69 μs** |
+|   ServiceStack |        10 |     1,589.0 μs |      2.45 μs |      2.05 μs |
+| SystemTextJson |        10 |     1,402.7 μs |      4.43 μs |      4.15 μs |
+|       Utf8Json |        10 |       704.5 μs |      6.39 μs |      5.67 μs |
+|            Jil |        10 |       771.1 μs |     14.30 μs |     18.59 μs |
+|     **Newtonsoft** |       **100** |    **13,178.6 μs** |    **187.20 μs** |    **175.10 μs** |
+|   ServiceStack |       100 |    16,080.3 μs |    198.66 μs |    176.11 μs |
+| SystemTextJson |       100 |    12,937.8 μs |    157.57 μs |    147.40 μs |
+|       Utf8Json |       100 |     6,866.0 μs |     34.42 μs |     32.19 μs |
+|            Jil |       100 |     6,512.5 μs |    129.85 μs |    121.46 μs |
+|     **Newtonsoft** |      **1000** |   **154,234.5 μs** |  **2,998.82 μs** |  **4,203.92 μs** |
+|   ServiceStack |      1000 |   162,711.8 μs |  1,111.54 μs |  1,039.73 μs |
+| SystemTextJson |      1000 |   140,517.9 μs |    968.19 μs |    905.64 μs |
+|       Utf8Json |      1000 |    75,343.0 μs |  1,020.36 μs |    904.52 μs |
+|            Jil |      1000 |    63,998.6 μs |    904.10 μs |    845.70 μs |
+|     **Newtonsoft** |     **10000** | **1,498,441.2 μs** | **18,720.83 μs** | **16,595.53 μs** |
+|   ServiceStack |     10000 | 1,653,251.8 μs |  4,527.61 μs |  4,235.13 μs |
+| SystemTextJson |     10000 | 1,514,409.9 μs | 11,924.56 μs | 11,154.24 μs |
+|       Utf8Json |     10000 |   844,954.6 μs |  8,255.92 μs |  7,722.59 μs |
+|            Jil |     10000 |   687,010.1 μs |  6,562.35 μs |  6,138.43 μs |
 
 
 ![alt text](BenchmarkResults.png "Title")

@@ -12,19 +12,22 @@ namespace SerializationBenchmark
     [RPlotExporter]
     public class SerializationTest
     {
-        private const int NElements = 10000;
+        [Params(10, 100, 1000, 10000)]
+        public int NElements; //Params are public (SerializationBenchmark requirement).
+
         private const int NNestedElements = 10;
 
         private readonly Consumer consumer = new Consumer();
 
-        private readonly IEnumerable<MainTestObject> _data;
-        private readonly ISerializationTest<IEnumerable<MainTestObject>> _newtonsoftSerializer;
-        private readonly ISerializationTest<IEnumerable<MainTestObject>> _serviceStackSerializer;
-        private readonly ISerializationTest<IEnumerable<MainTestObject>> _systemTextJsonSerializer;
-        private readonly ISerializationTest<IEnumerable<MainTestObject>> _utf8JsonSerializer;
-        private readonly ISerializationTest<IEnumerable<MainTestObject>> _jilSerializer;
+        private IEnumerable<MainTestObject> _data;
+        private ISerializationTest<IEnumerable<MainTestObject>> _newtonsoftSerializer;
+        private ISerializationTest<IEnumerable<MainTestObject>> _serviceStackSerializer;
+        private ISerializationTest<IEnumerable<MainTestObject>> _systemTextJsonSerializer;
+        private ISerializationTest<IEnumerable<MainTestObject>> _utf8JsonSerializer;
+        private ISerializationTest<IEnumerable<MainTestObject>> _jilSerializer;
 
-        public SerializationTest()
+        [GlobalSetup]
+        public void Setup()
         {
             _data = MockData.Create(NElements, NNestedElements);
             _newtonsoftSerializer = new NewtonsoftSerializer<IEnumerable<MainTestObject>>();
