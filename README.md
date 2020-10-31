@@ -1,5 +1,3 @@
-# JSONSerializationBenchmark
-
 The JSON Serialization Benchmark is a console application with a purpose (as the name describes) to test the performance of the various JSON serializers that exists out there.
 
 ##### Console Application should be run in RELEASE mode.
@@ -11,7 +9,7 @@ The JSON Serialization Benchmark is a console application with a purpose (as the
 - [BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet)
 - [Bogus](https://github.com/bchavez/Bogus)
 
-## Serializers Tested
+## Serializers tested
 - [Newtonsoft](https://www.newtonsoft.com/json)
 - [ServiceStack](https://github.com/ServiceStack/ServiceStack.Text)
 - [System.Text.Json](https://www.nuget.org/packages/System.Text.Json)
@@ -46,7 +44,7 @@ Intel Core i5-4670K CPU 3.40GHz (Haswell), 1 CPU, 4 logical and 4 physical cores
 
 ![alt text](BenchmarkResults.png "Title")
 
-## Source code directory layout:
+## Source code layout
 
 <pre>
 SerializationBenchmark/
