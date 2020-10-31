@@ -1,13 +1,13 @@
-﻿using Newtonsoft.Json;
-using SerializationBenchmark.Serialization.Interface;
+﻿using SerializationBenchmark.Serialization.Interface;
+using System.Text.Json;
 
 namespace SerializationBenchmark.Serialization.Implementation
 {
     /// <summary>
-    /// Newtonsoft Serializer
+    /// System.Text.Json Serializer
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class NewtonsoftSerializer<T> : SerializationTest<T> where T : class
+    public class SystemTextJsonSerializer<T> : SerializationTest<T> where T : class
     {
         /// <summary>
         /// Serializes object
@@ -16,7 +16,7 @@ namespace SerializationBenchmark.Serialization.Implementation
         /// <returns>JSON value</returns>
         public override string Serialize(T obj)
         {
-            return JsonConvert.SerializeObject(obj);
+            return JsonSerializer.Serialize(obj);
         }
         /// <summary>
         /// Deserialize string to a specified object
@@ -24,7 +24,7 @@ namespace SerializationBenchmark.Serialization.Implementation
         /// <param name="json"></param>
         public override T Deserialize(string json)
         {
-            return JsonConvert.DeserializeObject<T>(json);
+            return JsonSerializer.Deserialize<T>(json);
         }
     }
 }

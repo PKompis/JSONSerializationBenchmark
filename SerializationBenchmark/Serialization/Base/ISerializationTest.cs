@@ -1,5 +1,9 @@
 ﻿namespace SerializationBenchmark.Serialization.Interface
 {
+    /// <summary>
+    /// Serialization test base interface
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public interface ISerializationTest<T> where T : class
     {
         /// <summary>

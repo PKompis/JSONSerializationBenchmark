@@ -14,7 +14,7 @@ The JSON Serialization Benchmark is a console application with a purpose (as the
 ## Serializers Tested
 - [Newtonsoft](https://www.newtonsoft.com/json)
 - [ServiceStack](https://github.com/ServiceStack/ServiceStack.Text)
-
+- [System.Text.Json](https://www.nuget.org/packages/System.Text.Json)
 
 ## Results
 
@@ -26,10 +26,12 @@ Intel Core i5-4670K CPU 3.40GHz (Haswell), 1 CPU, 4 logical and 4 physical cores
   DefaultJob : .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
 
 ```
-|                    Method |    Mean |    Error |   StdDev |
-|-------------------------- |--------:|---------:|---------:|
-|   NewtonsoftSerialization | 1.249 s | 0.0124 s | 0.0116 s |
-| ServiceStackSerialization | 1.229 s | 0.0103 s | 0.0091 s |
+|                      Method |    Mean |    Error |   StdDev |
+|---------------------------- |--------:|---------:|---------:|
+|     NewtonsoftSerialization | 1.274 s | 0.0249 s | 0.0233 s |
+|   ServiceStackSerialization | 1.480 s | 0.0115 s | 0.0102 s |
+| SystemTextJsonSerialization | 1.372 s | 0.0102 s | 0.0095 s |
+
 
 
 ![alt text](Results.png "Title")
@@ -49,6 +51,7 @@ SerializationBenchmark/
 │   ├── Implementation/
 │   |   ├── NewtonsoftSerializer.cs
 │   |   ├── ServiceStackSerializer.cs
+│   |   ├── SystemTextJsonSerializer.cs
 ├── Types/
 │   ├── BaseTestObject.cs
 │   ├── MainTestObject.cs

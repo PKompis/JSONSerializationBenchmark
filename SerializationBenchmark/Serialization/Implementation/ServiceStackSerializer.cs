@@ -3,6 +3,10 @@ using ServiceStack.Text;
 
 namespace SerializationBenchmark.Serialization.Implementation
 {
+    /// <summary>
+    /// ServiceStack Serializer
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class ServiceStackSerializer<T> : SerializationTest<T> where T : class
     {
         /// <summary>

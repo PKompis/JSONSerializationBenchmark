@@ -20,19 +20,24 @@ namespace SerializationBenchmark
         private readonly IEnumerable<MainTestObject> _data;
         private readonly ISerializationTest<IEnumerable<MainTestObject>> _newtonsoftSerializer;
         private readonly ISerializationTest<IEnumerable<MainTestObject>> _serviceStackSerializer;
+        private readonly ISerializationTest<IEnumerable<MainTestObject>> _systemTextJsonSerializer;
 
         public SerializationTest()
         {
             _data = MockData.Create(NElements, NNestedElements);
             _newtonsoftSerializer = new NewtonsoftSerializer<IEnumerable<MainTestObject>>();
             _serviceStackSerializer = new ServiceStackSerializer<IEnumerable<MainTestObject>>();
+            _systemTextJsonSerializer = new SystemTextJsonSerializer<IEnumerable<MainTestObject>>();
         }
 
         [Benchmark]
         public void NewtonsoftSerialization() => _newtonsoftSerializer.Test(_data).Consume(consumer);
 
         [Benchmark]
-        public void ServiceStackSerialization() => _newtonsoftSerializer.Test(_data).Consume(consumer);
+        public void ServiceStackSerialization() => _serviceStackSerializer.Test(_data).Consume(consumer);
+
+        [Benchmark]
+        public void SystemTextJsonSerialization() => _systemTextJsonSerializer.Test(_data).Consume(consumer);
     }
 
 
