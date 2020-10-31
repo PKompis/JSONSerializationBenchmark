@@ -35,20 +35,20 @@ namespace SerializationBenchmark
         }
 
         [Benchmark]
-        public void NewtonsoftSerialization() => _newtonsoftSerializer.Test(_data).Consume(consumer);
+        public void Newtonsoft() => _newtonsoftSerializer.Test(_data).Consume(consumer);
 
         [Benchmark]
-        public void ServiceStackSerialization() => _serviceStackSerializer.Test(_data).Consume(consumer);
+        public void ServiceStack() => _serviceStackSerializer.Test(_data).Consume(consumer);
 
         [Benchmark]
-        public void SystemTextJsonSerialization() => _systemTextJsonSerializer.Test(_data).Consume(consumer);
+        public void SystemTextJson() => _systemTextJsonSerializer.Test(_data).Consume(consumer);
 
         [Benchmark]
-        public void Utf8JsonSerialization() => _utf8JsonSerializer.Test(_data).Consume(consumer);
+        public void Utf8Json() => _utf8JsonSerializer.Test(_data).Consume(consumer);
 
 
         [Benchmark]
-        public void JilSerialization() => _jilSerializer.Test(_data).Consume(consumer);
+        public void Jil() => _jilSerializer.Test(_data).Consume(consumer);
     }
 
 

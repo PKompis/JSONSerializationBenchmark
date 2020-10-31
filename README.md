@@ -26,6 +26,7 @@ A list of a custom object that can be found [here](https://github.com/PKompis/JS
 ## Results
 
 ``` ini
+
 BenchmarkDotNet=v0.12.1, OS=Windows 10.0.19042
 Intel Core i5-4670K CPU 3.40GHz (Haswell), 1 CPU, 4 logical and 4 physical cores
 .NET Core SDK=3.1.403
@@ -33,13 +34,14 @@ Intel Core i5-4670K CPU 3.40GHz (Haswell), 1 CPU, 4 logical and 4 physical cores
   DefaultJob : .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
 
 ```
-|                      Method |       Mean |    Error |   StdDev |
-|---------------------------- |-----------:|---------:|---------:|
-|     NewtonsoftSerialization | 1,456.0 ms |  8.45 ms |  7.06 ms |
-|   ServiceStackSerialization | 1,716.7 ms |  4.30 ms |  3.81 ms |
-| SystemTextJsonSerialization | 1,526.9 ms |  5.47 ms |  5.11 ms |
-|       Utf8JsonSerialization |   830.8 ms |  4.65 ms |  4.13 ms |
-|            JilSerialization |   686.3 ms | 11.43 ms | 10.69 ms |
+|         Method |       Mean |    Error |   StdDev |
+|--------------- |-----------:|---------:|---------:|
+|     Newtonsoft | 1,459.6 ms |  6.82 ms |  5.69 ms |
+|   ServiceStack | 1,666.6 ms |  5.40 ms |  5.05 ms |
+| SystemTextJson | 1,551.8 ms | 12.00 ms | 11.23 ms |
+|       Utf8Json |   843.4 ms |  9.77 ms |  9.14 ms |
+|            Jil |   683.7 ms |  8.83 ms |  8.26 ms |
+
 
 
 ![alt text](BenchmarkResults.png "Title")
