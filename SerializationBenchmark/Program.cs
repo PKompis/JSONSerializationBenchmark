@@ -9,6 +9,7 @@ using System.Collections.Generic;
 
 namespace SerializationBenchmark
 {
+    [RPlotExporter]
     public class SerializationTest
     {
         private const int NElements = 10000;
