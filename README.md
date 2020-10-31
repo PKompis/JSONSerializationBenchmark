@@ -18,10 +18,19 @@ The JSON Serialization Benchmark is a console application with a purpose (as the
 
 ## Results
 
-|                    Method |    Mean |
-|-------------------------- |--------:|
-|   NewtonsoftSerialization | 1.249 s |
-| ServiceStackSerialization | 1.229 s |
+``` ini
+BenchmarkDotNet=v0.12.1, OS=Windows 10.0.19042
+Intel Core i5-4670K CPU 3.40GHz (Haswell), 1 CPU, 4 logical and 4 physical cores
+.NET Core SDK=3.1.403
+  [Host]     : .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
+  DefaultJob : .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
+
+```
+|                    Method |    Mean |    Error |   StdDev |
+|-------------------------- |--------:|---------:|---------:|
+|   NewtonsoftSerialization | 1.249 s | 0.0124 s | 0.0116 s |
+| ServiceStackSerialization | 1.229 s | 0.0103 s | 0.0091 s |
+
 
 ![alt text](Results.png "Title")
 
