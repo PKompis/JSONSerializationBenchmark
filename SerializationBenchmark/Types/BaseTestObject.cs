@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SerializationBenchmark.Model
 {
@@ -23,6 +24,8 @@ namespace SerializationBenchmark.Model
         public char CharProperty { get; set; }
 
         public bool BoolProperty { get; set; }
+
+        public Dictionary<string, string> DictionaryProperty { get; set; }
 
         public TestEnum TestEnum { get; set; }
     }

@@ -35,7 +35,8 @@ namespace SerializationBenchmark.Data
                 .RuleFor(o => o.FloatProperty, f => f.Random.Float())
                 .RuleFor(o => o.IntProperty, f => f.Random.Int())
                 .RuleFor(o => o.LongProperty, f => f.Random.Long())
-                .RuleFor(o => o.StringProperty, f => f.Random.String());
+                .RuleFor(o => o.StringProperty, f => f.Random.String())
+                .RuleFor(o => o.DictionaryProperty, f => new Dictionary<string, string> { { "Test", "Test" } });
 
             return obj;
         }
