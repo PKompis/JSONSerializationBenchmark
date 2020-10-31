@@ -16,6 +16,11 @@ The JSON Serialization Benchmark is a console application with a purpose (as the
 - [ServiceStack](https://github.com/ServiceStack/ServiceStack.Text)
 - [System.Text.Json](https://www.nuget.org/packages/System.Text.Json)
 
+## Dataset
+
+A list of a custom object that can be found [here](https://github.com/PKompis/JSONSerializationBenchmark/blob/main/SerializationBenchmark/Types/MainTestObject.cs).
+10.000 elements are added to the above described list.
+
 ## Results
 
 ``` ini
