@@ -1,6 +1,6 @@
 The JSON Serialization Benchmark is a console application with a purpose (as the name describes) to test the performance of the various JSON serializers that exists out there. 
 
-The results may vary for different datasets/test objects, thus the application purpose is NOT to conclude which one is better, it is just a simple experiment of mine. Moreover performance is not the only factor which one should consider in order to choose a serializer.
+The results may vary for different datasets/test objects, thus the application purpose is NOT to conclude which one is better, as it cannot do so, it is just a simple experiment of mine. Moreover performance is not the only factor which one should consider in order to choose a serializer.
 
 
 **\*** Console Application should be run in RELEASE mode.  
