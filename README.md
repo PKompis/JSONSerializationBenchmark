@@ -42,7 +42,7 @@ Intel Core i5-4670K CPU 3.40GHz (Haswell), 1 CPU, 4 logical and 4 physical cores
 |            JilSerialization |   686.3 ms | 11.43 ms | 10.69 ms |
 
 
-![alt text](Results.png "Title")
+![alt text](BenchmarkResults.png "Title")
 
 ## Source code directory layout:
 
