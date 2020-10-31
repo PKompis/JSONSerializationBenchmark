@@ -1,8 +1,8 @@
 The JSON Serialization Benchmark is a console application with a purpose (as the name describes) to test the performance of the various JSON serializers that exists out there.
 
-##### Console Application should be run in RELEASE mode.
-##### If you do not have installed R comment out [this line](https://github.com/PKompis/.NETSerializationBenchmark/blob/main/SerializationBenchmark/Program.cs#L12)
 
+**\*** Console Application should be run in RELEASE mode.  
+**\*\*** If you do not have installed R, comment out [this line](https://github.com/PKompis/.NETSerializationBenchmark/blob/main/SerializationBenchmark/Program.cs#L12)
 
 ## Libaries used
 
@@ -46,7 +46,7 @@ Intel Core i5-4670K CPU 3.40GHz (Haswell), 1 CPU, 4 logical and 4 physical cores
 
 ## Source code layout
 
-<pre>
+``` ini
 SerializationBenchmark/
 ├── Program.cs
 ├── Data/
@@ -65,7 +65,7 @@ SerializationBenchmark/
 │   ├── BaseTestObject.cs
 │   ├── MainTestObject.cs
 │   ├── TestEnum.cs
-</pre>
+```
 
 ## Authors
 
