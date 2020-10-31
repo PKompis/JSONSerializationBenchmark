@@ -1,6 +1,6 @@
-# .NETSerializationBenchmark
+# JSONSerializationBenchmark
 
-The .NET Serialization Benchmark is a console application with a purpose (as the name describes) to test the performance of the various serializers that exists out there.
+The JSON Serialization Benchmark is a console application with a purpose (as the name describes) to test the performance of the various JSON serializers that exists out there.
 
 ##### Console Application should be run in RELEASE mode.
 ##### If you do not have installed R comment out [this line](https://github.com/PKompis/.NETSerializationBenchmark/blob/main/SerializationBenchmark/Program.cs#L12)
@@ -13,6 +13,18 @@ The .NET Serialization Benchmark is a console application with a purpose (as the
 
 ## Serializers Tested
 - [Newtonsoft](https://www.newtonsoft.com/json)
+- [ServiceStack](https://github.com/ServiceStack/ServiceStack.Text)
+
+
+## Results
+
+|                    Method |    Mean |
+|-------------------------- |--------:|
+|   NewtonsoftSerialization | 1.249 s |
+| ServiceStackSerialization | 1.229 s |
+
+![alt text](Results.png "Title")
+
 
 ## Source code directory layout:
 
@@ -27,6 +39,7 @@ SerializationBenchmark/
 │   |   ├── SerializerTest.cs
 │   ├── Implementation/
 │   |   ├── NewtonsoftSerializer.cs
+│   |   ├── ServiceStackSerializer.cs
 ├── Types/
 │   ├── BaseTestObject.cs
 │   ├── MainTestObject.cs
