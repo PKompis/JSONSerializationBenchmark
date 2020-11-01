@@ -44,7 +44,7 @@ namespace SerializationBenchmark
         public void ServiceStack() => _serviceStackSerializer.Test(_data).Consume(consumer);
 
         [Benchmark]
-        public void SystemTextJson() => _systemTextJsonSerializer.Test(_data).Consume(consumer);
+        public void SysTextJson() => _systemTextJsonSerializer.Test(_data).Consume(consumer);
 
         [Benchmark]
         public void Utf8Json() => _utf8JsonSerializer.Test(_data).Consume(consumer);
